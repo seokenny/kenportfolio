@@ -342,11 +342,19 @@ footer {
     }
     .info {
         padding: 2em;
+        &_head {
+            p {
+                margin-top: 1em;
+            }
+        }
         &_flex {
             display: block;
             &-box {
                 width: 100%;
-                margin-top: 1.5em;
+                margin-top: 2em;
+                h4 {
+                    margin-top: .75em;
+                }
             }
         }
         &_box {
@@ -368,6 +376,10 @@ footer {
             display: block;
             &-link {
                 width: 100%;
+            }
+            &-box {
+                min-height: 0;
+                padding-top: 100%;
             }
         }
     }

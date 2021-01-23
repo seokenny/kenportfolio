@@ -366,12 +366,18 @@ footer h1 {
   .info {
     padding: 2em;
   }
+  .info_head p {
+    margin-top: 1em;
+  }
   .info_flex {
     display: block;
   }
   .info_flex-box {
     width: 100%;
-    margin-top: 1.5em;
+    margin-top: 2em;
+  }
+  .info_flex-box h4 {
+    margin-top: .75em;
   }
   .info_box-0 {
     margin-right: 0;
@@ -388,6 +394,10 @@ footer h1 {
   }
   .work_gallery-link {
     width: 100%;
+  }
+  .work_gallery-box {
+    min-height: 0;
+    padding-top: 100%;
   }
   .aboutme_text {
     width: 100%;
