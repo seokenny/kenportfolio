@@ -9,6 +9,56 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: 600;
 }
 
+.fixednav {
+    width: 60px;
+    height: 100px;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 0 30px rgba(162, 181, 194, 0.40);
+    position: fixed;
+    top: 50%;
+    left: 3%;
+    transform: translateY(-50%);
+    z-index: 10;
+}
+
+.goback {
+    &_healco {
+        width: 50%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+
+.arrowbox {
+    position: absolute;
+    right: 1em;
+    height: 50px;
+    width: 50px;
+    top: 50%;
+    transform: translate(0, -40%);
+    border-radius: 15px;
+    &_healco {
+        background-color: $healco-prim;
+    }
+    &_rugsusa {
+        background-color: $rugs-red;
+    }
+    &_fuyu {
+        background-color: black;
+    }
+}
+
+.arrowsvg {
+    width: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
 .linebackground {
     width: 100%;
     height: 20000px;
@@ -114,6 +164,18 @@ body {
     &_red {
         background-color: $red;
     }
+    &_healco-prim {
+        background-color: $healco-prim;
+    }
+    &_healco-blue {
+        background-color: $healco-blue;
+    }
+    &_rugsusa-red {
+        background-color: $rugs-red;
+    }
+    &_rugsusa-second {
+        background-color: $rugs-second;
+    }
 }
 
 .work {
@@ -169,6 +231,7 @@ body {
                 }
             }
             &-text {
+                position: relative;
                 color: #373737;
                 bottom: 0;
                 padding: 1em 0 .5em 1em;
@@ -274,10 +337,10 @@ body {
 }
 
 footer {
-    background-color: white;
+    // background-color: white;
     position: relative;
-    border-radius: 30px 30px 0 0;
     margin-top: 50px;
+    border-radius: 30px 30px 0 0;
     color: rgb(59, 59, 59);
     // padding: 50px 60px 0 60px;
     & h1 {
@@ -343,10 +406,41 @@ footer {
 }
 
 .healco {
+    & .hero {
+        &_inner {
+            background-image: linear-gradient(
+                to bottom right, #56F3D2, #07B08C
+            );
+        }
+    }
     & .work {
         margin-top: 0;
         &_gallery {
             &-box {
+                box-shadow: unset;
+                padding: 0;
+            }
+        }
+    }
+    & .info.infomargin {
+        margin-top: 0;
+    }
+}
+
+.rugsusa {
+    & .hero {
+        &_inner {
+            background-image: linear-gradient(to bottom right, #E3376F, #80193A);
+            & h1 {
+                font-size: 3.155em;
+            }
+        }
+    }
+    & .work {
+        margin-top: 0;
+        &_gallery {
+            &-box {
+                box-shadow: unset;
                 padding: 0;
             }
         }
@@ -372,6 +466,14 @@ footer {
         &_gallery {
             display: flex;
             &-link {
+                &-left {
+                    margin-right: 1em;
+                }
+                &-right {
+                    margin-left: 1em;
+                }
+            }
+            &-box {
                 &-left {
                     margin-right: 1em;
                 }
