@@ -220,6 +220,8 @@ body {
 }
 
 .work_gallery-box {
+  -webkit-animation: bounceOut .3s;
+          animation: bounceOut .3s;
   border-radius: 30px;
   position: relative;
   background-color: white;
@@ -227,6 +229,17 @@ body {
           box-shadow: 0 0 30px rgba(162, 181, 194, 0.4);
   margin-top: 2em;
   padding: 20px;
+}
+
+.work_gallery-box:hover {
+  -webkit-animation: bounceIn .3s;
+          animation: bounceIn .3s;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+  -webkit-transform-origin: center center;
+          transform-origin: center center;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
 }
 
 .work_gallery-box-line {
@@ -338,7 +351,7 @@ body {
 
 footer {
   position: relative;
-  margin-top: 50px;
+  margin-top: 75px;
   border-radius: 30px 30px 0 0;
   color: #3b3b3b;
 }
@@ -440,6 +453,10 @@ footer h1 {
   margin-top: 0;
 }
 
+.slightbold {
+  font-weight: 600;
+}
+
 @media only screen and (min-width: 662px) {
   .info_head h3 {
     width: 549px;
@@ -475,6 +492,7 @@ footer h1 {
     display: flex;
   }
   .info_flex-box {
+    width: 33%;
     margin-top: 0;
   }
   .info_flex-box h4 {
@@ -493,6 +511,58 @@ footer h1 {
   .divider {
     margin-top: 4em;
     margin-bottom: 4em;
+  }
+}
+
+@-webkit-keyframes bounceIn {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  80% {
+    -webkit-transform: scale(1.04);
+            transform: scale(1.04);
+  }
+  100% {
+    -webkit-transform: scale(1.03);
+            transform: scale(1.03);
+  }
+}
+
+@keyframes bounceIn {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  80% {
+    -webkit-transform: scale(1.04);
+            transform: scale(1.04);
+  }
+  100% {
+    -webkit-transform: scale(1.03);
+            transform: scale(1.03);
+  }
+}
+
+@-webkit-keyframes bounceOut {
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  0% {
+    -webkit-transform: scale(1.03);
+            transform: scale(1.03);
+  }
+}
+
+@keyframes bounceOut {
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  0% {
+    -webkit-transform: scale(1.03);
+            transform: scale(1.03);
   }
 }
 /*# sourceMappingURL=main.css.map */

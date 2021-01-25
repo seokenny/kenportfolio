@@ -197,6 +197,13 @@ body {
             }
         }
         &-box {
+            animation: bounceOut .3s;
+            &:hover {
+                animation: bounceIn .3s;
+                animation-timing-function: ease-in-out;
+                transform-origin: center center;
+                animation-fill-mode: forwards;
+            }
             border-radius: 30px;
             position: relative;
             background-color: white;
@@ -339,7 +346,7 @@ body {
 footer {
     // background-color: white;
     position: relative;
-    margin-top: 50px;
+    margin-top: 75px;
     border-radius: 30px 30px 0 0;
     color: rgb(59, 59, 59);
     // padding: 50px 60px 0 60px;
@@ -450,6 +457,10 @@ footer {
     }
 }
 
+.slightbold {
+    font-weight: 600;
+}
+
 @media only screen and (min-width: 662px) {
     .info {
         &_head {
@@ -493,6 +504,7 @@ footer {
         &_flex {
             display: flex;
             &-box {
+                width: 33%;
                 margin-top: 0;
                 & h4 {
                     margin-top: 1em;
@@ -525,5 +537,26 @@ footer {
     .divider {
         margin-top: 4em;
         margin-bottom: 4em;
+    }
+}
+
+@keyframes bounceIn {
+    0% {
+        transform: scale(1);
+    }
+    80% {
+        transform: scale(1.04);
+    }
+    100% {
+        transform: scale(1.03);
+    }
+}
+
+@keyframes bounceOut {
+    100% {
+        transform: scale(1);
+    }
+    0% {
+        transform: scale(1.03);
     }
 }

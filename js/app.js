@@ -1,6 +1,6 @@
 gsap.to(".info_0", {
     scrollTrigger: '.info_0',
-    y: 0,
+    y: -75,
     duration: .75
 })
 
@@ -10,11 +10,11 @@ let ill0 = gsap.timeline({
     }
 });
 
-ill0.from(".info_0", { y: 75, opacity: 0, duration: 1})
+ill0.from(".info_0", { opacity: 0, duration: 1})
 
 gsap.to(".info_1", {
     scrollTrigger: '.info_1',
-    y: 0,
+    y: -75,
     duration: .75
 })
 
@@ -24,7 +24,7 @@ let ill = gsap.timeline({
     }
 });
 
-ill.from(".info_1", { y: 75, opacity: 0, duration: 1})
+ill.from(".info_1", { opacity: 0, duration: 1})
 
 
 gsap.to(".aboutme", {
@@ -32,7 +32,7 @@ gsap.to(".aboutme", {
         trigger: ".aboutme",
         duration: .75,
     },
-    y: 0,
+    y: -75,
 })
 
 let al = gsap.timeline({
@@ -41,7 +41,7 @@ let al = gsap.timeline({
     }
 });
 
-al.from(".aboutme", { y: 75, opacity: 0, duration: 1})
+al.from(".aboutme", { opacity: 0, duration: 1})
 
 
 gsap.to("footer", {
@@ -49,7 +49,7 @@ gsap.to("footer", {
         trigger: ".footer",
         duration: .75,
     },
-    y: 0,
+    y: -75,
 })
 
 let fl = gsap.timeline({
@@ -58,7 +58,7 @@ let fl = gsap.timeline({
     }
 });
 
-fl.from("footer", { y: 75, opacity: 0, duration: 1})
+fl.from("footer", { opacity: 0, duration: 1})
 
 
 gsap.to(".hero_inner", {
@@ -66,7 +66,8 @@ gsap.to(".hero_inner", {
         trigger: ".hero_inner",
         duration: .75,
     },
-    y: 0,
+    // y: 0,
+    scale: .75
 })
 
 let hl = gsap.timeline({
@@ -75,7 +76,7 @@ let hl = gsap.timeline({
     }
 });
 
-hl.from(".hero_inner", { y: 75, opacity: 0, duration: 1})
+hl.from(".hero_inner", { scale: 1.2, opacity: 0, duration: .75})
 
 ///////
 
@@ -84,7 +85,7 @@ gsap.to(".info_box-0", {
         trigger: ".info_box-0",
         duration: .75,
     },
-    y: 0,
+    y: -75,
 })
 
 let info0 = gsap.timeline({
@@ -93,7 +94,7 @@ let info0 = gsap.timeline({
     }
 });
 
-info0.from(".info_box-0", { y: 75, opacity: 0, duration: 1})
+info0.from(".info_box-0", { opacity: 0, duration: 1})
 
 
 gsap.to(".info_box-1", {
@@ -101,7 +102,7 @@ gsap.to(".info_box-1", {
         trigger: ".info_box-1",
         duration: .75,
     },
-    y: 0,
+    y: -75,
 })
 
 let info1 = gsap.timeline({
@@ -110,7 +111,7 @@ let info1 = gsap.timeline({
     }
 });
 
-info1.from(".info_box-1", { y: 75, opacity: 0, duration: 1})
+info1.from(".info_box-1", { opacity: 0, duration: 1})
 
 
 gsap.to(".info_box-2", {
@@ -118,7 +119,7 @@ gsap.to(".info_box-2", {
         trigger: ".info_box-2",
         duration: .75,
     },
-    y: 0,
+    y: -75,
 })
 
 let info2 = gsap.timeline({
@@ -127,39 +128,23 @@ let info2 = gsap.timeline({
     }
 });
 
-info2.from(".info_box-2", { y: 75, opacity: 0, duration: 1})
+info2.from(".info_box-2", { opacity: 0, duration: 1})
 
 ////////
 
-gsap.to(".work_box-0", {
+gsap.to(".work", {
     scrollTrigger: {
-        trigger: ".work_box-0",
+        trigger: ".work",
         duration: .75,
     },
-    y: 0,
+    y: -75,
 })
 
 let work0 = gsap.timeline({
     scrollTrigger: {
-        trigger: ".work_box-0"
+        trigger: ".work"
     }
 });
 
-work0.from(".work_box-0", { y: 75, opacity: 0, duration: 1})
+work0.from(".work", { opacity: 0, duration: 1})
 
-
-gsap.to(".work_box-1", {
-    scrollTrigger: {
-        trigger: ".work_box-1",
-        duration: .75,
-    },
-    y: 0,
-})
-
-let work1 = gsap.timeline({
-    scrollTrigger: {
-        trigger: ".work_box-1"
-    }
-});
-
-work1.from(".work_box-1", { y: 75, opacity: 0, duration: 1})
