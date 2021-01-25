@@ -9,13 +9,31 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: 600;
 }
 
+.linebackground {
+    width: 100%;
+    height: 20000px;
+    position: fixed;
+    z-index: -1;
+    &_flex {
+        display: flex;
+        width: 100%;
+        height: 100%;
+        justify-content: space-evenly;
+        &-line {
+            height: 100%;
+            width: 1px;
+            background-color: rgb(235, 235, 235);
+        }
+    }
+}
+
 #container {
     width: 85%;
     margin: auto;
 }
 
 .info {
-    background-color: white;
+    // background-color: white;
     border-radius: 30px;
     margin-top: 6em;
     // margin-bottom: 6em;
@@ -62,9 +80,26 @@ body {
 
 .hero {
     width: 100%;
-    height: 400px;
-    background-color: white;
-    border-radius: 0 0 30px 30px;
+    height: 100vh;
+    position: relative;
+    &_inner {
+        display: inline-block;
+        border-radius: 30px;
+        padding: 3em;
+        background-image: linear-gradient(
+            to bottom right, $yellow, $red
+        );
+        position: absolute;
+        transform: translate(-50%, -50%);
+        top: 50%;
+        left: 50%;
+        box-shadow: 0 0 30px rgba(162, 181, 194, 0.40);
+        & h1 {
+            color: white;
+            font-size: 3.5em;
+            line-height: 1.2em;
+        }
+    }
 }
 
 .color {
@@ -321,6 +356,17 @@ footer {
     }
 }
 
+@media only screen and (min-width: 662px) {
+    .info {
+        &_head {
+            & h3 {
+                width: 549px;
+                margin: auto;
+            }
+        }
+    }
+}
+
 @media only screen and (min-width: 850px) {
     .work {
         &_gallery {
@@ -338,7 +384,7 @@ footer {
     .info {
         &_head {
             h3 {
-                width: 750px;
+                width: 549px;
                 margin: auto;
             }
         }
