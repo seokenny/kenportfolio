@@ -49,6 +49,9 @@ h1, h2, h3, h4, h5, h6 {
     &_fuyu {
         background-color: black;
     }
+    &_datadove {
+        background-color: #1c1c24;
+    }
 }
 
 .arrowsvg {
@@ -124,6 +127,12 @@ body {
     font-family: "Poppins";
 }
 
+.hello {
+    margin: auto;
+    margin-top: 1em;
+    font-size: 1.15em;
+}
+
 .dash {
     margin: 0 2px !important;
 }
@@ -131,17 +140,14 @@ body {
 .hero {
     width: 100%;
     position: relative;
-    height: 100vh;
     text-align: center;
     &_inner {
         word-wrap: break-word;
         display: inline-block;
         border-radius: 30px;
         width: 100%;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
+        padding-top: 8em;
+        padding-bottom: 8em;
         & h1 {
             color: black;
             font-size: 2.17em;
@@ -499,6 +505,10 @@ footer {
         display: unset;
     }
 
+    .hello {
+        font-size: 1.25em;
+    }
+
     .hero {
         &_inner {
             & h1 {
@@ -577,6 +587,13 @@ footer {
     }
 }
 
+@media only screen and (min-width: 1092px) {
+    .hello {
+        width: 915px;
+        font-size: 1.5em;
+    }
+}
+
 @media only screen and (min-width: 1132px) {
     .info {
         &_head {
@@ -628,3 +645,5 @@ footer {
         transform: scale(1.03);
     }
 }
+
+
