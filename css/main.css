@@ -143,29 +143,44 @@ body {
 
 .hero {
   width: 100%;
-  height: 100vh;
   position: relative;
+  height: 100vh;
+  text-align: center;
 }
 
 .hero_inner {
+  word-wrap: break-word;
   display: inline-block;
   border-radius: 30px;
-  padding: 3em;
-  background-image: -webkit-gradient(linear, left top, right bottom, from(#F9AF1F), to(#F91F60));
-  background-image: linear-gradient(to bottom right, #F9AF1F, #F91F60);
+  width: 100%;
   position: absolute;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
   top: 50%;
   left: 50%;
-  -webkit-box-shadow: 0 0 30px rgba(162, 181, 194, 0.4);
-          box-shadow: 0 0 30px rgba(162, 181, 194, 0.4);
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
 
 .hero_inner h1 {
-  color: white;
-  font-size: 3.5em;
-  line-height: 1.2em;
+  color: black;
+  font-size: 2.17em;
+  line-height: 1.1em;
+  font-weight: bolder;
+}
+
+.hero_inner h1 .design {
+  color: #F9AF1F;
+}
+
+.hero_inner h1 .develop {
+  color: #F96D1F;
+}
+
+.hero_inner h1 .uxui {
+  color: #F91F60;
+}
+
+.fl_remove {
+  display: none;
 }
 
 .color {
@@ -457,14 +472,27 @@ footer h1 {
   font-weight: 600;
 }
 
+@media only screen and (min-width: 500px) {
+  .hero_inner h1 {
+    font-size: 3em;
+    line-height: 1.1em;
+  }
+}
+
 @media only screen and (min-width: 662px) {
   .info_head h3 {
-    width: 549px;
     margin: auto;
   }
 }
 
 @media only screen and (min-width: 850px) {
+  .fl_remove {
+    display: unset;
+  }
+  .hero_inner h1 {
+    font-size: 5em;
+    line-height: 1.1em;
+  }
   .work_gallery {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -483,8 +511,11 @@ footer h1 {
     margin-left: 1em;
   }
   .info_head h3 {
-    width: 549px;
     margin: auto;
+  }
+  .info_head .ihelp {
+    width: 90%;
+    font-size: 1.75em;
   }
   .info_flex {
     display: -webkit-box;
@@ -511,6 +542,28 @@ footer h1 {
   .divider {
     margin-top: 4em;
     margin-bottom: 4em;
+  }
+}
+
+@media only screen and (min-width: 1132px) {
+  .info_head .ihelp {
+    width: 854px;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .hero {
+    width: 1007px;
+    margin: auto;
+  }
+  .info_head .ihelp {
+    font-size: 2em;
+  }
+}
+
+@media only screen and (min-width: 1500px) {
+  #container {
+    width: 1262px;
   }
 }
 
