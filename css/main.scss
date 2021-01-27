@@ -131,6 +131,8 @@ body {
     margin: auto;
     margin-top: 1em;
     font-size: 1.15em;
+    font-family: "Quicksand";
+    color: dimgray;
 }
 
 .dash {
@@ -260,8 +262,12 @@ body {
                 color: #373737;
                 bottom: 0;
                 padding: 1em 0 .5em 1em;
+                & h3 {
+                    font-size: 1.3em;
+                }
                 & h6 {
                     font-weight: 300;
+                    font-size: .8em;
                 }
                 & p {
                     margin-top: 20px;
@@ -321,6 +327,7 @@ body {
 }
 
 .aboutme {
+    box-shadow: 0 0 30px rgba(162, 181, 194, 0.40);
     width: 100%;
     padding: 30px 0;
     background-image: linear-gradient(
@@ -354,11 +361,30 @@ body {
         border-radius: 10px;
         border: none;
         background-color: white;
-        color: #373737;
+        // box-shadow: 0 6px 15px rgba(119, 48, 0, 0.4);
+        // color: #373737;
+        // color: $red;
         font-weight: 700;
-        font-size: 11px;
-        letter-spacing: 1px;
+        font-size: .8em;
+        font-family: "Quicksand";
+        transition: .5s;
+        background-image: linear-gradient(
+            to bottom, white, #ddd
+        );
+        border: 1px solid white;
+        cursor: pointer;
+        &:hover {
+            transform: translate(0, -5px) scale(1.03);
+            transition: .5s;
+            box-shadow: 0 5px 10px rgba(139, 56, 0, 0.4);
+        }
     }
+}
+
+.test {
+    background: -webkit-linear-gradient(-70deg, $yellow, $red);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 footer {
@@ -432,23 +458,93 @@ footer {
 
 .healco {
     & .hero {
+        width: 100%;
+        & h1 {
+            color: white;
+        }
         &_inner {
             background-image: linear-gradient(
                 to bottom right, #56F3D2, #07B08C
             );
+            border-radius: 0 0 30px 30px;
+            padding: 6em 0;
         }
     }
+    & .subphrase {
+        width: 75%;
+        color: white;
+        margin: auto;
+        font-size: 1em;
+        margin-top: 1em;
+    }
     & .work {
+        &_graphics {
+            & img {
+                width: 100%;
+                box-shadow: 0 0 30px rgba(162, 181, 194, 0.40);
+                border-radius: 30px;
+                margin-top: .5em;
+                margin-bottom: .5em;
+                &:nth-child(1) {
+                    margin-top: 1.5em;
+                }
+            }
+        }
+        &_box {
+            &-0 {
+                display: none;
+            }
+            &-1 {
+                display: none;
+            }
+            &-2 {
+                display: none;
+            }
+            &-image {
+
+            }
+        }
         margin-top: 0;
+        &_image {
+        }
         &_gallery {
+            display: none;
+            margin-top: 2em;
+            margin-bottom: 1em;
+            width: 100%;
+            height: 500px;
+            
             &-box {
                 box-shadow: unset;
+                margin: unset;
                 padding: 0;
+                width: 100%;
+                padding-top: 100%;
+            }
+        }
+    }
+    & .info {
+        margin-top: 4em;
+        &_flex-box p {
+            margin-top: 2em;
+            &.solution {
+                margin-top: unset;
             }
         }
     }
     & .info.infomargin {
         margin-top: 0;
+    }
+
+}
+
+.display {
+    width: 100%;
+    border-radius: 30px;
+    margin-top: .5em;
+    margin-bottom: .5m;
+    &-0 {
+        margin-top: 2em;
     }
 }
 
@@ -475,8 +571,34 @@ footer {
     }
 }
 
+.prob_sol {
+    &u {
+        font-weight: bold;
+    }
+    margin-top: 3em;
+}
+
+.wg_top {
+    margin-bottom: 2em;
+}
+
 .slightbold {
     font-weight: 600;
+}
+
+// .solution {
+//     margin-top: 2em !important;
+// }
+
+.problem {
+
+}
+
+.problem, .solution, .overview {
+    // box-shadow: 0 0 30px rgba(162, 181, 194, 0.40);
+    padding: 1em;
+    border-radius: 30px;
+    background-color: white;
 }
 
 @media only screen and (min-width: 500px) {
@@ -500,7 +622,79 @@ footer {
     }
 }
 
+@media only screen and (min-width: 780px) {
+    .healco {
+        & .work {
+            &_graphics {
+                & img {
+                    width: 49%
+                }
+                &-left {
+                    margin-right: 1%;
+                }
+                &-right {
+                    margin-left: 1%;
+                }
+            }
+            &_box {
+                &-mobile {
+                    display: none;
+                }
+                &-0 {
+                    grid-column-start:1;
+                    grid-column-end:3;
+                    grid-row-start:1;
+                    grid-row-end:7;
+                    background-color:blue;
+                    background-image: url("../images/landing2.png");
+                    background-size: cover;
+                    display: block;
+                }
+                &-1 {
+                    grid-column-start: 4;
+                    grid-column-end:7;
+                    grid-row-start:1;
+                    grid-row-end: 3;
+                    background-color: coral;
+                    background-image: url("../images/flow.png");
+                    background-size: cover;
+                    display: block;
+                }
+                &-2  {
+                    grid-column-start: 4;
+                    grid-column-end:7;
+                    grid-row-start:4;
+                    grid-row-end: 7;
+                    background-color: black;
+                    background-image: url("../images/dashboard.png");
+                    background-size: cover;
+                    display: block;
+                }
+            }
+            margin-top: 0;
+            &_image {
+            }
+            &_gallery {
+                margin-top: 2em;
+                margin-bottom: 1em;
+                width: 100%;
+                height: 500px;
+                display:grid;
+                grid-template-columns: 24% 24% 2em 24% 24%;
+                grid-template-rows: 24%  24% 2em 24% 24% auto;
+                
+                &-box {
+                    box-shadow: unset;
+                    margin: unset;
+                    padding: 0;
+                }
+            }
+        }
+    }
+}
+
 @media only screen and (min-width: 850px) {
+
     .fl_remove {
         display: unset;
     }
@@ -566,6 +760,9 @@ footer {
         }
     }
     .healco {
+        .subphrase {
+            font-size: 1.75em;
+        }
         & .work {
             &_gallery {
                 &-box {

@@ -145,6 +145,8 @@ body {
   margin: auto;
   margin-top: 1em;
   font-size: 1.15em;
+  font-family: "Quicksand";
+  color: dimgray;
 }
 
 .dash {
@@ -284,8 +286,13 @@ body {
   padding: 1em 0 .5em 1em;
 }
 
+.work_gallery-box-text h3 {
+  font-size: 1.3em;
+}
+
 .work_gallery-box-text h6 {
   font-weight: 300;
+  font-size: .8em;
 }
 
 .work_gallery-box-text p {
@@ -329,6 +336,8 @@ body {
 }
 
 .aboutme {
+  -webkit-box-shadow: 0 0 30px rgba(162, 181, 194, 0.4);
+          box-shadow: 0 0 30px rgba(162, 181, 194, 0.4);
   width: 100%;
   padding: 30px 0;
   background-image: -webkit-gradient(linear, left top, right bottom, from(#F9AF1F), to(#F91F60));
@@ -364,10 +373,30 @@ body {
   border-radius: 10px;
   border: none;
   background-color: white;
-  color: #373737;
   font-weight: 700;
-  font-size: 11px;
-  letter-spacing: 1px;
+  font-size: .8em;
+  font-family: "Quicksand";
+  -webkit-transition: .5s;
+  transition: .5s;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(white), to(#ddd));
+  background-image: linear-gradient(to bottom, white, #ddd);
+  border: 1px solid white;
+  cursor: pointer;
+}
+
+.aboutme .contactme:hover {
+  -webkit-transform: translate(0, -5px) scale(1.03);
+          transform: translate(0, -5px) scale(1.03);
+  -webkit-transition: .5s;
+  transition: .5s;
+  -webkit-box-shadow: 0 5px 10px rgba(139, 56, 0, 0.4);
+          box-shadow: 0 5px 10px rgba(139, 56, 0, 0.4);
+}
+
+.test {
+  background: -webkit-linear-gradient(-70deg, #F9AF1F, #F91F60);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 footer {
@@ -432,23 +461,100 @@ footer h1 {
   border-radius: 100px;
 }
 
+.healco .hero {
+  width: 100%;
+}
+
+.healco .hero h1 {
+  color: white;
+}
+
 .healco .hero_inner {
   background-image: -webkit-gradient(linear, left top, right bottom, from(#56F3D2), to(#07B08C));
   background-image: linear-gradient(to bottom right, #56F3D2, #07B08C);
+  border-radius: 0 0 30px 30px;
+  padding: 6em 0;
+}
+
+.healco .subphrase {
+  width: 75%;
+  color: white;
+  margin: auto;
+  font-size: 1em;
+  margin-top: 1em;
 }
 
 .healco .work {
   margin-top: 0;
 }
 
+.healco .work_graphics img {
+  width: 100%;
+  -webkit-box-shadow: 0 0 30px rgba(162, 181, 194, 0.4);
+          box-shadow: 0 0 30px rgba(162, 181, 194, 0.4);
+  border-radius: 30px;
+  margin-top: .5em;
+  margin-bottom: .5em;
+}
+
+.healco .work_graphics img:nth-child(1) {
+  margin-top: 1.5em;
+}
+
+.healco .work_box-0 {
+  display: none;
+}
+
+.healco .work_box-1 {
+  display: none;
+}
+
+.healco .work_box-2 {
+  display: none;
+}
+
+.healco .work_gallery {
+  display: none;
+  margin-top: 2em;
+  margin-bottom: 1em;
+  width: 100%;
+  height: 500px;
+}
+
 .healco .work_gallery-box {
   -webkit-box-shadow: unset;
           box-shadow: unset;
+  margin: unset;
   padding: 0;
+  width: 100%;
+  padding-top: 100%;
+}
+
+.healco .info {
+  margin-top: 4em;
+}
+
+.healco .info_flex-box p {
+  margin-top: 2em;
+}
+
+.healco .info_flex-box p.solution {
+  margin-top: unset;
 }
 
 .healco .info.infomargin {
   margin-top: 0;
+}
+
+.display {
+  width: 100%;
+  border-radius: 30px;
+  margin-top: .5em;
+  margin-bottom: .5m;
+}
+
+.display-0 {
+  margin-top: 2em;
 }
 
 .rugsusa .hero_inner {
@@ -474,8 +580,26 @@ footer h1 {
   margin-top: 0;
 }
 
+.prob_sol {
+  margin-top: 3em;
+}
+
+.prob_solu {
+  font-weight: bold;
+}
+
+.wg_top {
+  margin-bottom: 2em;
+}
+
 .slightbold {
   font-weight: 600;
+}
+
+.problem, .solution, .overview {
+  padding: 1em;
+  border-radius: 30px;
+  background-color: white;
 }
 
 @media only screen and (min-width: 500px) {
@@ -488,6 +612,78 @@ footer h1 {
 @media only screen and (min-width: 662px) {
   .info_head h3 {
     margin: auto;
+  }
+}
+
+@media only screen and (min-width: 780px) {
+  .healco .work {
+    margin-top: 0;
+  }
+  .healco .work_graphics img {
+    width: 49%;
+  }
+  .healco .work_graphics-left {
+    margin-right: 1%;
+  }
+  .healco .work_graphics-right {
+    margin-left: 1%;
+  }
+  .healco .work_box-mobile {
+    display: none;
+  }
+  .healco .work_box-0 {
+    -ms-grid-column: 1;
+        grid-column-start: 1;
+    grid-column-end: 3;
+    -ms-grid-row: 1;
+        grid-row-start: 1;
+    grid-row-end: 7;
+    background-color: blue;
+    background-image: url("../images/landing2.png");
+    background-size: cover;
+    display: block;
+  }
+  .healco .work_box-1 {
+    -ms-grid-column: 4;
+        grid-column-start: 4;
+    grid-column-end: 7;
+    -ms-grid-row: 1;
+        grid-row-start: 1;
+    grid-row-end: 3;
+    background-color: coral;
+    background-image: url("../images/flow.png");
+    background-size: cover;
+    display: block;
+  }
+  .healco .work_box-2 {
+    -ms-grid-column: 4;
+        grid-column-start: 4;
+    grid-column-end: 7;
+    -ms-grid-row: 4;
+        grid-row-start: 4;
+    grid-row-end: 7;
+    background-color: black;
+    background-image: url("../images/dashboard.png");
+    background-size: cover;
+    display: block;
+  }
+  .healco .work_gallery {
+    margin-top: 2em;
+    margin-bottom: 1em;
+    width: 100%;
+    height: 500px;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 24% 24% 2em 24% 24%;
+        grid-template-columns: 24% 24% 2em 24% 24%;
+    -ms-grid-rows: 24%  24% 2em 24% 24% auto;
+        grid-template-rows: 24%  24% 2em 24% 24% auto;
+  }
+  .healco .work_gallery-box {
+    -webkit-box-shadow: unset;
+            box-shadow: unset;
+    margin: unset;
+    padding: 0;
   }
 }
 
@@ -541,6 +737,9 @@ footer h1 {
   .info_box-1 {
     margin-left: 2em;
     margin-right: 2em;
+  }
+  .healco .subphrase {
+    font-size: 1.75em;
   }
   .healco .work_gallery-box {
     padding: 0;
