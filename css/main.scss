@@ -172,6 +172,25 @@ body {
     display: none;
 }
 
+.double_pics {
+    width: 100%;
+    margin-top: 2em;
+}
+
+.double {
+    &_0 {
+        border-radius: 30px;
+        display: block;
+        width: 100%;
+    }
+    &_1 {
+        border-radius: 30px;
+        margin-top: 2em;
+        display: block;
+        width: 100%;
+    }
+}
+
 .color {
     width: 100%;
     height: 2px;
@@ -195,6 +214,9 @@ body {
     }
     &_rugsusa-second {
         background-color: $rugs-second;
+    }
+    &_datadove {
+        background-color: $datadove;
     }
 }
 
@@ -390,8 +412,11 @@ body {
 footer {
     // background-color: white;
     position: relative;
-    margin-top: 75px;
-    border-radius: 30px 30px 0 0;
+    margin-top: 3em;
+    border-radius: 30px 30px 30px;
+    box-shadow: 0 0 30px rgba(162, 181, 194, 0.40);
+    background-color: white;
+    padding: 3em 0 2em 0;
     color: rgb(59, 59, 59);
     // padding: 50px 60px 0 60px;
     & h1 {
@@ -408,6 +433,7 @@ footer {
         padding: 20px;
         text-align: center;
         color: rgb(218, 218, 218);
+        padding-bottom: unset;
     }
 }
 
@@ -446,6 +472,12 @@ footer {
     -webkit-text-fill-color: transparent;
 }
 
+.single {
+    width: 100%;
+    border-radius: 30px;
+    margin-top: 2em;
+}
+
 .divider {
     width: 80%;
     height: 3px;
@@ -455,6 +487,8 @@ footer {
     background-color: rgba(162, 181, 194, 0.25);
     border-radius: 100px;
 }
+
+
 
 .healco {
     & .hero {
@@ -466,7 +500,8 @@ footer {
             background-image: linear-gradient(
                 to bottom right, #56F3D2, #07B08C
             );
-            border-radius: 0 0 30px 30px;
+            border-radius: 30px;
+            margin-top: 4em;
             padding: 6em 0;
         }
     }
@@ -515,6 +550,8 @@ footer {
             height: 500px;
             
             &-box {
+                cursor: pointer;
+                animation: none;
                 box-shadow: unset;
                 margin: unset;
                 padding: 0;
@@ -535,7 +572,25 @@ footer {
     & .info.infomargin {
         margin-top: 0;
     }
+    footer {
+        margin-bottom: 3em;
+    }
+}
 
+.datadove {
+    & .hero {
+        &_inner {
+            background-image: linear-gradient(to bottom right, #1b2029, #07080b);
+        }
+    }
+}
+
+.rugsusa {
+    & .hero {
+        &_inner {
+            background-image: linear-gradient(to bottom right, #c53162, #8d1e41);
+        }
+    }
 }
 
 .display {
@@ -694,7 +749,25 @@ footer {
 }
 
 @media only screen and (min-width: 850px) {
-
+    .double_pics {
+        display: flex;
+    }
+    .double {
+        &_0 {
+            border-radius: 30px;
+            display: inline-block;
+            width: 48%;
+            margin-right: 2%;
+        }
+        &_1 {
+            border-radius: 30px;
+            display: inline-block;
+            width: 48%;
+            margin-left: 2%;
+            margin-top: unset;
+        }
+    }
+    
     .fl_remove {
         display: unset;
     }

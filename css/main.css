@@ -191,6 +191,24 @@ body {
   display: none;
 }
 
+.double_pics {
+  width: 100%;
+  margin-top: 2em;
+}
+
+.double_0 {
+  border-radius: 30px;
+  display: block;
+  width: 100%;
+}
+
+.double_1 {
+  border-radius: 30px;
+  margin-top: 2em;
+  display: block;
+  width: 100%;
+}
+
 .color {
   width: 100%;
   height: 2px;
@@ -222,6 +240,10 @@ body {
 
 .color_rugsusa-second {
   background-color: #80193A;
+}
+
+.color_datadove {
+  background-color: #1b2029;
 }
 
 .work {
@@ -401,8 +423,12 @@ body {
 
 footer {
   position: relative;
-  margin-top: 75px;
-  border-radius: 30px 30px 0 0;
+  margin-top: 3em;
+  border-radius: 30px 30px 30px;
+  -webkit-box-shadow: 0 0 30px rgba(162, 181, 194, 0.4);
+          box-shadow: 0 0 30px rgba(162, 181, 194, 0.4);
+  background-color: white;
+  padding: 3em 0 2em 0;
   color: #3b3b3b;
 }
 
@@ -417,6 +443,7 @@ footer h1 {
   padding: 20px;
   text-align: center;
   color: #dadada;
+  padding-bottom: unset;
 }
 
 .social {
@@ -451,6 +478,12 @@ footer h1 {
   -webkit-text-fill-color: transparent;
 }
 
+.single {
+  width: 100%;
+  border-radius: 30px;
+  margin-top: 2em;
+}
+
 .divider {
   width: 80%;
   height: 3px;
@@ -472,7 +505,8 @@ footer h1 {
 .healco .hero_inner {
   background-image: -webkit-gradient(linear, left top, right bottom, from(#56F3D2), to(#07B08C));
   background-image: linear-gradient(to bottom right, #56F3D2, #07B08C);
-  border-radius: 0 0 30px 30px;
+  border-radius: 30px;
+  margin-top: 4em;
   padding: 6em 0;
 }
 
@@ -522,6 +556,9 @@ footer h1 {
 }
 
 .healco .work_gallery-box {
+  cursor: pointer;
+  -webkit-animation: none;
+          animation: none;
   -webkit-box-shadow: unset;
           box-shadow: unset;
   margin: unset;
@@ -544,6 +581,20 @@ footer h1 {
 
 .healco .info.infomargin {
   margin-top: 0;
+}
+
+.healco footer {
+  margin-bottom: 3em;
+}
+
+.datadove .hero_inner {
+  background-image: -webkit-gradient(linear, left top, right bottom, from(#1b2029), to(#07080b));
+  background-image: linear-gradient(to bottom right, #1b2029, #07080b);
+}
+
+.rugsusa .hero_inner {
+  background-image: -webkit-gradient(linear, left top, right bottom, from(#c53162), to(#8d1e41));
+  background-image: linear-gradient(to bottom right, #c53162, #8d1e41);
 }
 
 .display {
@@ -688,6 +739,24 @@ footer h1 {
 }
 
 @media only screen and (min-width: 850px) {
+  .double_pics {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .double_0 {
+    border-radius: 30px;
+    display: inline-block;
+    width: 48%;
+    margin-right: 2%;
+  }
+  .double_1 {
+    border-radius: 30px;
+    display: inline-block;
+    width: 48%;
+    margin-left: 2%;
+    margin-top: unset;
+  }
   .fl_remove {
     display: unset;
   }
