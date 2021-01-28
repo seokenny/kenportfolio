@@ -148,10 +148,14 @@ body {
         display: inline-block;
         border-radius: 30px;
         width: 100%;
-        padding-top: 8em;
-        padding-bottom: 8em;
+        margin-top: 4em;
+        padding: 6em 0;
+        background-image:
+        linear-gradient(
+            to bottom right, $yellow, $red
+        );
         & h1 {
-            color: black;
+            color: white;
             font-size: 2.17em;
             line-height: 1.1em;
             font-weight: bolder;
